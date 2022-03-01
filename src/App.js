@@ -8,15 +8,16 @@ import {
 } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css"
-import Login from './componets/accounts/Login';
+import Home from './componets/accounts/Home';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="*" element={<Navigate to="/login" /> } />
+          <Route path="/Home" element={<Home />} />
+          <Route path="*" element={<Navigate to="/Home" /> } />
+    
         </Routes>
       </Router>
     </div>
