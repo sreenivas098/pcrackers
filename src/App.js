@@ -9,6 +9,8 @@ import {
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import Login from './componets/accounts/Login';
+import SelctBranch from './componets/branch/SelectBranch';
+import HomeBranch from './componets/branch/HomeBranch';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<Navigate to="/login" /> } />
+          <Route path="/branch" element={<SelctBranch />} />
+          <Route path="/branch/:branch" element={<HomeBranch />} />
         </Routes>
       </Router>
     </div>
