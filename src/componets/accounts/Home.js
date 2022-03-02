@@ -20,14 +20,10 @@ const Home  = () => {
                 <div className="ml-1 col-6 col-md-5  border border-dark rounded-3" style={{background:'#903dcc'}}>
                    <div className="container" style={{width:'24rem',marginTop:'100px'}}>
                     <Login/>
-                <div className="form-group" style={{marginTop:'24px'}}>
-                <button class="btn btn-success d-inline  col-md-6" type="button">Login</button>
-                    
-                    
-                    <button class="btn btn-secondary d-inline col-md-6" type="button">SignUp</button>
-                </div>
-                         
-                    
+                    <div className="form-group" style={{marginTop:'24px'}}>
+                        <button class="btn btn-success d-inline  col-md-6" type="button">Login</button>   
+                        <button class="btn btn-secondary d-inline col-md-6" type="button">SignUp</button>
+                    </div>
                     </div>
                 </div>
             </div>
