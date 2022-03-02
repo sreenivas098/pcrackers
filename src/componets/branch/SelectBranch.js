@@ -1,4 +1,4 @@
-import {useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 
@@ -12,7 +12,6 @@ const SelctBranch = () => {
     "Metallurgical",
     "Chemical",
   ];
-  const navigate = useNavigate();
   return (
     <div className="container-fluid" style={{position:'fixed', width:'100%', height:'100%'}}>
       <div className="row">
@@ -25,11 +24,8 @@ const SelctBranch = () => {
               {branches.map((branch, index) => (
                 <li
                   key={index}
-                  className="text-warning  list-group-item bg-secondary"
-                >
-                  <p className="btn" onClick={() =>navigate(`/branch/${branchShort[index]}`)}>
-                    {branch} Engineering
-                  </p>
+                  className=" h4  list-group-item bg-secondary"
+                ><Link to={`/branch/${branchShort[index]}`} className="text-decoration-none text-warning">{branch} Engineering</Link>
                 </li>
               ))}
             </ul>

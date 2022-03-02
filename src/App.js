@@ -11,11 +11,13 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Login from './componets/accounts/Login';
 import SelctBranch from './componets/branch/SelectBranch';
 import HomeBranch from './componets/branch/HomeBranch';
+import Navbar from './componets/branch/Navbar';
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Navbar />
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<Navigate to="/login" /> } />
