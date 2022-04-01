@@ -1,8 +1,16 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-const Signup = () => {
-    const { register,handleSubmit,  watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data)
+import {useNavigate} from 'react-router-dom'
+import { connect } from 'react-redux'
+import { AccountSignup } from '../../redux_store/reducers/Action Creators/AccountFunctions';
+const Signup = ({SignupData, AccountSignup}) => {
+    const { register,handleSubmit, formState: { errors } } = useForm();
+   
+    const history = useNavigate()
+    useEffect(()=>{
+        console.log(SignupData);
+    },[SignupData]);
+    const onSubmit = data =>{data.history = history; AccountSignup(data)};
   return <>
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-groups mb-3">
@@ -38,7 +46,7 @@ const Signup = () => {
                  {errors.phone_number && <p className='alert alert-danger' role="alert">Enter Contact number</p>}
             </div>  
             <div className='form-group'>
-                <input type="submit" className='btn btn-lg col-12 mt-3 mb-3 py-3 h4' value="Submit"/>
+                <input type="submit" className='btn btn-lg col-12 mt-3 mb-3 py-3 h4' disabled={SignupData.initiated} value="Submit"/>
           </div>  
         </form>
                   
@@ -47,4 +55,11 @@ const Signup = () => {
 
 // test : mocha \"src/*.test.js\" --require @babel/register --recursive
 
-export default Signup;
+
+const mapStateToProps = state =>({
+    SignupData: state.AccountData,
+})
+const mapDispatchToProps = dispatch => ({
+    AccountSignup: (data) => dispatch(AccountSignup(data))
+})
+export default connect(mapStateToProps, mapDispatchToProps)(Signup);
