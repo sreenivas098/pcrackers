@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <nav class="navbar navbar-light bg-light">
-    <Link class="navbar-brand" to="/branch">
-        <img src="" width="30" height="30" class="d-inline-block align-top" alt="" />
+    <nav className="navbar navbar-light bg-light">
+    <Link className="navbar-brand" to="/branch">
+        <img src="assets/logo.jpeg" width="30" height="30" className="d-inline-block align-top" alt="" />&nbsp;&nbsp;
         PCrackers
     </Link>
     </nav>
