@@ -14,5 +14,29 @@ export const Quiz  = [
             'CSE', 'ECE', 'CIVIL', 'MECH'
         ],
         'correct': 'CSE'
+    },
+    {
+        'question': 'Branch Name',
+        'id': 456,
+        'choices': [
+            'CSE', 'ECE', 'CIVIL', 'MECH'
+        ],
+        'correct': 'CSE'
+    },
+    {
+        'question': 'Branch Name',
+        'id': 456,
+        'choices': [
+            'CSE', 'ECE', 'CIVIL', 'MECH'
+        ],
+        'correct': 'CSE'
+    },
+    {
+        'question': 'Branch Name',
+        'id': 456,
+        'choices': [
+            'CSE', 'ECE', 'CIVIL', 'MECH'
+        ],
+        'correct': 'CSE'
     }
 ]

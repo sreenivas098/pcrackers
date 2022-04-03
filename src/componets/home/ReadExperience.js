@@ -18,7 +18,7 @@ const ReadExperience = ({ReadExperienceData}) => {
                 </div>
                 <div>
                     {item.description.substring(0, 40)} <br/>
-                    <Link to={`${item.id}`}>Click here..</Link>
+                    <Link to={`interview/read/experience/${item.id}`}>Click here..</Link>
                 </div>
             </div>
        )}

@@ -19,6 +19,7 @@ import ReadExperience from './componets/home/ReadExperience';
 import Experience from './componets/home/Experience';
 import Quiz from './componets/home/Quiz';
 import Profile from './componets/home/Profile';
+import Main from './componets/home/Main';
 
 function App() {
   return (
@@ -30,9 +31,10 @@ function App() {
           {/* <Route path="/login" element={<Login />} /> */}
           <Route path="*" element={<Navigate to="/home" /> } />
           <Route path="/branch" element={<SelctBranch />} />
-          <Route path="/branch/:branch" element={<HomeBranch />} />
-          <Route path="/branch/quiz" element={<Quiz />} /> 
+         { /* <Route path="/branch/:branch" element={<HomeBranch />} /> */}
+          <Route path="/branch/:branch/quiz" element={<Quiz />} /> 
           <Route path="/branch/:branch/profile/:id" element={<Profile />} />
+          <Route path="/branch/:branch" element={<Main />} />
           <Route path="/branch/:branch/interview/write/experience" element={<WriteExperience />} />
           <Route path="/branch/:branch/interview/read/experience" element={<ReadExperience />} />
           <Route path="/branch/:branch/interview/read/experience/:id" element={<Experience />} />
