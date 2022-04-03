@@ -14,6 +14,11 @@ import Home from './componets/accounts/Home';
 import SelctBranch from './componets/branch/SelectBranch';
 import HomeBranch from './componets/branch/HomeBranch';
 import Navbar from './componets/branch/Navbar';
+import WriteExperience from './componets/home/WriteExperience';
+import ReadExperience from './componets/home/ReadExperience';
+import Experience from './componets/home/Experience';
+import Quiz from './componets/home/Quiz';
+import Profile from './componets/home/Profile';
 
 function App() {
   return (
@@ -26,6 +31,12 @@ function App() {
           <Route path="*" element={<Navigate to="/home" /> } />
           <Route path="/branch" element={<SelctBranch />} />
           <Route path="/branch/:branch" element={<HomeBranch />} />
+          <Route path="/branch/quiz" element={<Quiz />} /> 
+          <Route path="/branch/:branch/profile/:id" element={<Profile />} />
+          <Route path="/branch/:branch/interview/write/experience" element={<WriteExperience />} />
+          <Route path="/branch/:branch/interview/read/experience" element={<ReadExperience />} />
+          <Route path="/branch/:branch/interview/read/experience/:id" element={<Experience />} />
+
         </Routes>
       </Router>
     </div>
