@@ -9,7 +9,7 @@ const TopMenu = ({setShowQuiz}) =>{
 				
 					<button to="quiz" className="col-2 ml-2 btn btn-secondary btn-lg" onClick={()=>setShowQuiz(1)}>Quiz</button>
 			
-					<Link to="" className="col-3 ml-2 btn btn-info btn-lg">Interview Experience</Link>
+					<Link to="" className="col-3 ml-2 btn btn-info btn-lg" onClick={()=>setShowQuiz(2)}>Interview Experience</Link>
 				
 				
 			</div>

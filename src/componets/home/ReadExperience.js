@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
-
-const ReadExperience = ({ReadExperienceData}) => {
+import { ExperienceFunctions }from "./../../redux_store/reducers/Action Creators/ExperienceFunctions"
+const ReadExperience = ({ReadExperienceData, companyId, getExperience}) => {
     useEffect(()=>{
-        console.log(ReadExperienceData);
-    }, [ReadExperienceData])
+        if(companyId ===0 )
+            getExperience(companyId)
+        else getExperience(companyId)
+    }, [companyId])
   return (
     <div className='container'>
        {ReadExperienceData && ReadExperienceData.map((item, index)=>
-            <div className='container mb-3'>
+            <div className='container mb-3' key={index}>
                 <div className='row'>
                     <div className='col-6'>
                         <b>Company: </b>{item.company}
@@ -31,5 +33,8 @@ const ReadExperience = ({ReadExperienceData}) => {
 const mapstateToProps = state => ({
     ReadExperienceData: state.Experience.experience,
 })
+const mapDispatchTopros = dispatch => ({
+    getExperience: (id) => dispatch(ExperienceFunctions(id))
+})
 
-export default connect(mapstateToProps, null)(ReadExperience)
+export default connect(mapstateToProps, mapDispatchTopros)(ReadExperience)

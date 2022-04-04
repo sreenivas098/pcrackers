@@ -16,3 +16,6 @@ export const WRITE_EXPERIENCE = 'WRITE_EXPERIENCE'
 
 // Profile
 export const GET_PROFILE = 'GET_PROFILE'
+
+// Companies
+export const GET_COMPANIES = 'GET_COMPANIES'
